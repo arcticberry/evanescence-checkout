@@ -1,0 +1,63 @@
+:root {
+  --var-brand-primary: #00b4d8;
+  --var-brand-secondary: #0077b6;
+  --var-brand-tertiary: #001b2e;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #fafafa;
+  font-family: "Helvetica Neue", arial, sans-serif;
+  font-weight: 400;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+}
+
+.app-loading .spinner-container {
+  z-index: 99999;
+}
+
+.spinner-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: hsla(0, 0%, 88%, 0.95);
+  z-index: -99999;
+}
+
+.spinner-container .spinner {
+  margin-top: -20px;
+  margin-left: -20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  color: var(--var-brand-primary);
+}
+
+.spinner .svg-spinner {
+  animation: spin 0.5s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
