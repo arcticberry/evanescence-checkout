@@ -2,7 +2,7 @@ import { h } from "preact";
 import PaymentProvider from "../../components/PaymentProvider";
 import Loader from "../../components/Loader";
 import useApplicationVendors from "../../hooks/queries/useApplicationVendors";
-import * as style from "./style.css";
+import style from "./style.css";
 import Logo from "../../components/Logo";
 
 const Popup = ({ pubKey }) => {
@@ -11,12 +11,7 @@ const Popup = ({ pubKey }) => {
   const { isError, isLoading, data: application } = opts;
 
   if (isLoading) return <Loader withContainer />;
-  if (isError)
-    return (
-      <div>
-        Unable to load payment providers {process.env.PREACT_APP_API_BASE_URL}
-      </div>
-    );
+  if (isError) return <div>Unable to load payment providers</div>;
 
   return (
     <div class={style.popupContainer}>
