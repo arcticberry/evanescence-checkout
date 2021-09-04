@@ -14,6 +14,9 @@ jobs:
         run: |
           npm install
           CI=false npm run build
+        env:
+          PREACT_APP_API_BASE_URL: ${{ secrets.PREACT_APP_API_BASE_URL }}
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
