@@ -44,5 +44,22 @@
   user-select: none;
 }
 
-.popup__content {
+.popup__footer {
+  display: flex;
+  margin-top: 2em;
+  justify-content: space-between;
+}
+
+.popup__message {
+  color: #d3d4d8;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.popup__icon {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  color: #ef476f;
 }
