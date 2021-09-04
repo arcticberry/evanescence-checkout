@@ -11,7 +11,12 @@ const Popup = ({ pubKey }) => {
   const { isError, isLoading, data: application } = opts;
 
   if (isLoading) return <Loader withContainer />;
-  if (isError) return <div>Unable to load payment providers</div>;
+  if (isError)
+    return (
+      <div>
+        Unable to load payment providers {process.env.PREACT_APP_API_BASE_URL}
+      </div>
+    );
 
   return (
     <div class={style.popupContainer}>
