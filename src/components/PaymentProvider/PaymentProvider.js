@@ -3,11 +3,15 @@ import { Link } from "preact-router";
 import LazyLoadedImage from "../LazyImage";
 import style from "./payment-provider.css";
 
-const PaymentProvider = ({ provider, src }) => {
+const PaymentProvider = ({ provider, label, src }) => {
   return (
     <Link href="/" class={style.provider}>
-      <LazyLoadedImage class={style.provider__logo} src={src} />
-      <h2 class={style.provider__title}>Pay with {provider}</h2>
+      <section class="flex">
+        <div class={style.provider__logo}>
+          <LazyLoadedImage src={src} />
+        </div>
+        <h2 class={style.provider__title}>Pay with {label}</h2>
+      </section>
       <div class={style.provider__control}>
         <svg
           focusable="false"

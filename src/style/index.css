@@ -2,6 +2,7 @@
   --var-brand-primary: #00b4d8;
   --var-brand-secondary: #0077b6;
   --var-brand-tertiary: #001b2e;
+  --var-text-dark: #496179;
 }
 
 html,
@@ -11,7 +12,7 @@ body {
   padding: 0;
   margin: 0;
   background: #fafafa;
-  font-family: "Helvetica Neue", arial, sans-serif;
+  font-family: "Poppins", arial, sans-serif;
   font-weight: 400;
   color: #444;
   -webkit-font-smoothing: antialiased;
@@ -51,6 +52,10 @@ body {
 
 .spinner .svg-spinner {
   animation: spin 0.5s infinite linear;
+}
+
+.flex {
+  display: flex;
 }
 
 @keyframes spin {

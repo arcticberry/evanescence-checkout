@@ -12,6 +12,19 @@
   background: #fff;
   padding: 4rem;
   border-radius: 8px;
+  width: 50%;
+}
+
+@media screen and (max-width: 16em) {
+  .popup {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .popup {
+    width: 80%;
+  }
 }
 
 .popup__heading {
@@ -23,11 +36,12 @@
 
 .popup__title {
   font-size: 18px;
-  color: var(--var-brand-tertiary);
+  color: var(--var-text-dark);
 }
 .popup__subtitle {
   font-size: 18px;
   color: #d3d4d8;
+  user-select: none;
 }
 
 .popup__content {

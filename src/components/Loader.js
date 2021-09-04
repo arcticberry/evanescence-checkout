@@ -1,5 +1,5 @@
-const Loader = () => {
-  return (
+const Loader = ({ withContainer }) => {
+  const spinner = (
     <div class="spinner">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -16,6 +16,18 @@ const Loader = () => {
       </svg>
     </div>
   );
+
+  return withContainer ? (
+    <div class="spinner-container" style={{ zIndex: 9999 }}>
+      {spinner}
+    </div>
+  ) : (
+    spinner
+  );
+};
+
+Loader.defaultProps = {
+  withContainer: false,
 };
 
 export default Loader;
