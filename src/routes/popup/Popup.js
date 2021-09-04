@@ -2,8 +2,7 @@ import { h } from "preact";
 import PaymentProvider from "../../components/PaymentProvider";
 import Loader from "../../components/Loader";
 import useApplicationVendors from "../../hooks/queries/useApplicationVendors";
-import style from "./popup.css";
-import LazyLoadedImage from "../../components/LazyImage";
+import * as style from "./style.css";
 import Logo from "../../components/Logo";
 
 const Popup = ({ pubKey }) => {
