@@ -2,9 +2,7 @@ import { useEffect } from "preact/hooks";
 import { Router } from "preact-router";
 
 // Code-splitting is automated for `routes` directory
-import Home from "../routes/home";
 import Popup from "../routes/popup";
-import Profile from "../routes/profile";
 
 const App = () => {
   useEffect(() => {
@@ -14,10 +12,7 @@ const App = () => {
   return (
     <div id="app">
       <Router>
-        <Home path="/" />
-        <Popup path="/popup" />
-        <Profile path="/profile/" user="me" />
-        <Profile path="/profile/:user" />
+        <Popup path="/" />
       </Router>
     </div>
   );
