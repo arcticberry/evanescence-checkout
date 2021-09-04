@@ -1,0 +1,148 @@
+.home__5d1wS {
+  background: #f0f1f3;
+  min-height: 100%;
+  width: 100%;
+}
+
+.provider__1Ph_I {
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  width: 100%;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.provider__1Ph_I,
+.provider__1Ph_I:active,
+.provider__1Ph_I:focus {
+  text-decoration: none;
+  color: #496179;
+}
+
+.provider__title__2n_Ad {
+  font-size: 1rem;
+}
+
+.provider__control__G35R_,
+.provider__logo__39xI3 {
+  color: #a1a4b1;
+}
+
+.provider__control__G35R_ {
+  width: 32px;
+  height: 32px;
+}
+.provider__logo__39xI3 {
+  width: 32px;
+  margin-right: 2em;
+}
+
+.popupContainer__1Lmu_ {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  background: #f0f1f3;
+  height: 100%;
+  width: 100%;
+}
+
+.popup__1uAj- {
+  background: #fff;
+  padding: 4rem;
+  border-radius: 8px;
+  width: 50%;
+}
+
+@media screen and (max-width: 16em) {
+  .popup__1uAj- {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .popup__1uAj- {
+    width: 80%;
+  }
+}
+
+.popup__heading__1Yw70 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.popup__title__3kZiD {
+  font-size: 18px;
+  color: var(--var-text-dark);
+}
+.popup__subtitle__VgeN9 {
+  font-size: 18px;
+  color: #d3d4d8;
+  -webkit-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.popup__footer__2HF1A {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2em;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.popup__message__2eEAd {
+  color: #d3d4d8;
+  font-weight: 600;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.popup__icon__fW8xl {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  color: #ef476f;
+}
+
+.scaling-svg-container__1s6Cd {
+    position: relative;
+    height: 0;
+    width: inherit;
+    padding: 0;
+    padding-bottom: 100%;
+}
+
+.scaling-svg__1mVtV {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.profile__11nNM {
+	padding: 56px 20px;
+	min-height: 100%;
+	width: 100%;
+}
+
+
+/*# sourceMappingURL=ssr-bundle.69863.css.map*/
