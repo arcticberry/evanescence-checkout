@@ -54,6 +54,12 @@
     }
   };
 
+  let messageHandlers = {};
+
+  messageHandlers.allcontentloaded = function (message) {
+    alert("Just received a message", message);
+  };
+
   /**
    * Accepts a keypair map of attributes and adds them to element
    * @param {Object} attributes
@@ -74,6 +80,17 @@
       const prefix = idx === 0 ? "" : "&";
       return `${acc}${prefix}${key}=${encodeURIComponent(val)}`;
     }, "");
+  }
+
+  /**
+   * Attaches neccessary event listeners
+   */
+  function attachEventListeners() {
+    window.addEventListener("message", (message) => {
+      if (message) {
+        messageHandlers[message.data.name](message);
+      }
+    });
   }
 
   /**
@@ -125,6 +142,7 @@
    * @returns {void}
    */
   window.initializePayreflectInline = function (config) {
+    attachEventListeners();
     loadIframe();
     passConfigToFrame(config);
   };
