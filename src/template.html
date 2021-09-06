@@ -13,12 +13,6 @@
     />
     <link rel="stylesheet" type="text/css" href="/assets/style/reset.min.css" />
     <link rel="stylesheet" type="text/css" href="/assets/style/index.css" />
-    <script src="/assets/js/payreflect-inline.js"></script>
-    <script>
-      window.onload = function () {
-        window.initializePayreflectInline();
-      };
-    </script>
     <% preact.headEnd %>
   </head>
   <body class="app-loading">
@@ -39,6 +33,7 @@
         </svg>
       </div>
     </section>
+    <script src="/src/assets/js/payreflect-sdk.js"></script>
     <% preact.bodyEnd %>
   </body>
 </html>

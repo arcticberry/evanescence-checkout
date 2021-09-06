@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Example Payreflect</title>
+  </head>
+  <body class="">
+    <h2>Loading app</h2>
+    <button id="startPayment">Start Payment</button>
+    <script src="./js/payreflect-inline.js"></script>
+    <script>
+      document.getElementById("startPayment").onclick = function () {
+        window.initializePayreflectInline({
+          pubKey: "pk_test-f30b489a0263f2fcea9ec0c3444fbb6e2f3edb1a",
+        });
+      };
+    </script>
+  </body>
+</html>
