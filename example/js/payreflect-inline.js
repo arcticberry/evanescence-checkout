@@ -87,6 +87,7 @@
    */
   function attachEventListeners() {
     window.addEventListener("message", (message) => {
+      alert(message);
       if (message) {
         messageHandlers[message.data.name](message);
       }
