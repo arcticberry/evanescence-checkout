@@ -6,6 +6,7 @@
     attachAttributesToElement(
       {
         class: "spinner-container",
+        id: "payreflect-checkout-spinner-container",
       },
       spinnerContainer
     );
@@ -53,11 +54,32 @@
       document.getElementsByTagName("head")[0].appendChild(pageStyle);
     }
   };
+  let shouldShowSpinner = true;
+  let iframeAlreadyShown = false;
+
+  let showIframe = function () {
+    const frame = document.getElementById("payreflect-checkout");
+
+    iframeAlreadyShown = true;
+    // modalframesource.setAttribute('width', '100%');
+    // modalframesource.setAttribute('height', '100%');
+    document.body.style.overflow = "hidden";
+    frame.style.opacity = "1";
+    frame.style.pointerEvents = "";
+    frame.style.zIndex = "2147483647";
+  };
 
   let messageHandlers = {};
 
-  messageHandlers.allcontentloaded = function (message) {
-    alert("Just received a message", message);
+  messageHandlers.allcontentloaded = function () {
+    loadingStatus = "loaded";
+    if (!shouldShowSpinner) {
+      const $spinnerContainer = document.getElementById(
+        "payreflect-checkout-spinner-container"
+      );
+      document.body.removeChild($spinnerContainer);
+      showIframe();
+    }
   };
 
   /**
@@ -83,11 +105,10 @@
   }
 
   /**
-   * Attaches neccessary event listeners
+   * Attaches necessary event listeners
    */
   function attachEventListeners() {
     window.addEventListener("message", (message) => {
-      alert(message);
       if (message) {
         messageHandlers[message.data.name](message);
       }
@@ -119,9 +140,10 @@
     }
 
     if (loadingStatus === "loaded") {
+      alert("This guy is loaded!");
     } else {
       showSpinner();
-      loadingStatus = "loaded";
+      shouldShowSpinner = false;
     }
   }
 
