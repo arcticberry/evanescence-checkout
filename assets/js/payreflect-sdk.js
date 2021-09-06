@@ -1,1 +1,1 @@
-window,document.addEventListener("DOMContentLoaded",(()=>{window.postMessage({name:"allcontentloaded"},"*")}));
+(e=>{e.addEventListener("DOMContentLoaded",(()=>{e.postMessage({name:"allcontentloaded"},"*")}))})(window);
