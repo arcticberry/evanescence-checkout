@@ -1,5 +1,5 @@
 ((window) => {
   window.addEventListener("DOMContentLoaded", () => {
-    window.postMessage({ name: "allcontentloaded" }, "*");
+    window.top.postMessage({ name: "allcontentloaded" }, "*");
   });
 })(window);

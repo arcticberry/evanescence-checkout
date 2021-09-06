@@ -137,13 +137,14 @@
     frame.src = frame.src + generateQueryString(config);
   }
 
+  attachEventListeners();
+
   /**
    * Rolls the ball into motion.
    * @param {Object} config
    * @returns {void}
    */
   window.initializePayreflectInline = function (config) {
-    attachEventListeners();
     loadIframe();
     passConfigToFrame(config);
   };
